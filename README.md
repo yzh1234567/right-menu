@@ -24,7 +24,6 @@ Vue.use(rightMenus);
 
 属性  |  说明  |  类型  |  默认值
 :-------: | -------  |  :-------:  |  :-------:
-<small>value</small>|<small>用于存放结果的数组，建议使用v-model来做双向绑定</small>|Array|无
 width |  右键菜单宽度  | Number | 166
 content |  右键菜单内容数组对象  |  Array  |  必传
 
