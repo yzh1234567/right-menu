@@ -51,32 +51,24 @@ berak | 菜单分割线位置(默认三个为一组分割) | Boolean | false
 
 export default {
        data(){
-
            return {
-
                rightMenus:{
-
                    width:190,//右键菜单宽度 ；默认值166
-
                    content:[
-
                        {
-
-                          label:string,//右键菜单子项名称 （必需值）
-
-                          handler:function,//右键菜单子项方法（可选值）
-
+                          label:'复制',//右键菜单子项名称 （必需值）
+                          handler:this.copy,//右键菜单子项方法（可选值）
                           disabled:boolean,//子项是否禁用（可选值）
-
                           break:boolean,//子项分割线标准（不给值默认3个为一组分割）
-
                        }
-
                    ]
-
                }
            }
+       },
+       methods:{
+         copy(){
 
+         }
        }
 
   }
