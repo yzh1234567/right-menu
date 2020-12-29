@@ -20,6 +20,10 @@
     "type": "git",
     "url": "git+https://github.com/yzh1234567/right-menu.git"
   },
+  "bugs": {
+    "url": "https://github.com/yzh1234567/right-menu/issues"
+  },
+  "homepage": "https://github.com/yzh1234567/right-menu",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

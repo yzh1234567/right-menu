@@ -1,6 +1,6 @@
 <template>
   <div
-    id="id"
+    id="_menutesthaha"
     class="right-menu"
     :style="{
       display: rightMenuStatus,
@@ -37,12 +37,6 @@ export default {
     rightMenuList: Array,
     width: String,
   },
-  data() {
-    return {
-      id: "_menutesthaha",
-    };
-  },
-  mounted() {},
   methods: {
     handleRight(e) {
       e.returnValue = false;
