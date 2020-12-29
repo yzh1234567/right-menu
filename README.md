@@ -30,6 +30,7 @@ content |  右键菜单内容数组对象  |  Array  |  必传
 
 # content 配置说明
 属性  |  说明  |  类型  |  默认值
+:-------: | -------  |  :-------:  |  :-------:
 label | 菜单名称 | String | 必传
 handler | 菜单操作方法 | Function | 非必传
 disabled | 菜单是否禁用 | Boolean | false 
