@@ -41,10 +41,10 @@ berak | 菜单分割线位置(默认三个为一组分割) | Boolean | false
 ```vue
 <template>
 
-  <li
-    class="row-panel"
+  <div
     v-right-menu="rightMenus"
   >
+  </div>
 
 </template>
 
