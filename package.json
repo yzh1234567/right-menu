@@ -2,7 +2,7 @@
   "name": "self-right-menus",
   "author": "yuzhanghui <2533988193@qq.com>",
   "private": false,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "这是一个基于Vue的自定义右键无限层级菜单项目",
   "main": "./dist/right-menu.js",
   "scripts": {

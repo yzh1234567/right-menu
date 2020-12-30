@@ -1,11 +1,10 @@
-# right-menu
+# self-right-menus
 一个自定义的右键无限层级菜单指令
 
 
 插件安装
 yarn add self-right-menus
 
-# or
 
 npm install self-right-menus --save
 
