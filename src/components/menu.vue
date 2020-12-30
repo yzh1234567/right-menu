@@ -73,12 +73,12 @@ export default {
 <style>
 @font-face {
   font-family: "self-right-arraw";
-  src: url("./right-arrow/iconfont.eot");
-  src: url("./right-arrow/iconfont.eot?#iefix") format("embedded-opentype"),
-    url("./right-arrow/iconfont.woff2") format("woff2"),
-    url("./right-arrow/iconfont.woff") format("woff"),
-    url("./right-arrow/iconfont.ttf") format("truetype"),
-    url("./right-arrow/iconfont.svg#iconfont") format("svg");
+  src: url("./iconfont.eot");
+  src: url("./iconfont.eot?#iefix") format("embedded-opentype"),
+    url("./iconfont.woff2") format("woff2"),
+    url("./iconfont.woff") format("woff"),
+    url("./iconfont.ttf") format("truetype"),
+    url("./iconfont.svg#iconfont") format("svg");
 }
 .self-right-arraw {
   font-family: "self-right-arraw" !important;
