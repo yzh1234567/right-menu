@@ -1,17 +1,16 @@
 <template>
   <div
-    class="right-menus"
+    class="menus"
     :style="{
-      display: rightMenuStatus,
-      top: rightMenuTop,
-      left: rightMenuLeft,
-      width: width + 'px',
+      width: data.width + 'px',
+      left: Number(left) - 5 + 'px',
+      display: show ? 'block' : 'none',
     }"
     @contextmenu="handleRight"
   >
     <!--分组渲染-->
     <div
-      v-for="(item, i) of rightMenuList"
+      v-for="(item, i) of data.rightMenuList"
       :key="item.id"
       class="menu-item"
       @mouseenter="handleEnter(item, i)"
@@ -34,29 +33,23 @@
         v-if="item.children"
         :data="item.children"
         :show="item.show"
-        :left="width"
+        :left="data.width"
       ></menus>
       <span class="inline" v-if="item.break"></span>
     </div>
   </div>
 </template>
 <script>
-import menus from "./menu";
 export default {
-  name: "right-menu",
+  name: "menus",
   props: {
-    rightMenuStatus: String,
-    rightMenuTop: String,
-    rightMenuLeft: String,
-    rightMenuList: Array,
-    width: [String, Number],
-  },
-  components: {
-    menus,
+    data: Object,
+    show: Boolean,
+    left: [String, Number],
   },
   data() {
     return {
-      show: false,
+      showChild: false,
     };
   },
   methods: {
@@ -64,19 +57,20 @@ export default {
       e.returnValue = false;
     },
     handleEnter(val, i) {
+      console.log(val.width);
       if (val.children) {
-        this.$set(this.rightMenuList[i], "show", true);
+        this.$set(this.data.rightMenuList[i], "show", true);
       }
     },
     handleLeave(val, i) {
       if (val.children) {
-        this.$set(this.rightMenuList[i], "show", false);
+        this.$set(this.data.rightMenuList[i], "show", false);
       }
     },
   },
 };
 </script>
-<style scoped>
+<style>
 @font-face {
   font-family: "self-right-arraw";
   src: url("./right-arrow/iconfont.eot");
@@ -99,8 +93,8 @@ export default {
   box-sizing: border-box;
 }
 
-.right-menus {
-  position: fixed;
+.menus {
+  position: absolute;
   left: 0;
   top: 0;
   width: 166px;
@@ -112,10 +106,7 @@ export default {
   border-radius: 5px;
   font-size: 14px;
   padding: 2px 0;
-  z-index: 3000;
-}
-.menu-item {
-  position: relative;
+  z-index: 3100;
 }
 .menu-flex {
   padding: 0 6px;
